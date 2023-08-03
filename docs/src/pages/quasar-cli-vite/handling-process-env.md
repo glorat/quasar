@@ -198,6 +198,7 @@ build: {
 ```js
 const { FOO } = process.env // ❌ It doesn't allow destructuring or similar
 process.env.FOO             // ✅ It can only replace direct usage like this
+process.env?.FOO            // ❌ It doesn't allow optional chaining
 
 function getEnv(name) {
   return process.env[name] // ❌ It can't analyze dynamic usage
